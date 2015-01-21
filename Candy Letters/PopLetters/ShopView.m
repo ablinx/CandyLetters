@@ -63,7 +63,7 @@
     if( self = [super init]){
         screenSize = [[CCDirector sharedDirector] winSize];
         offset = screenSize.height/12;
-        CCLayerColor *colorLayer = [CCLayerColor layerWithColor:ccc4(190,173,207,1)];
+        CCLayerColor *colorLayer = [CCLayerColor layerWithColor:ccc4(236,236,236,1)];
         [self addChild:colorLayer];
         [self addWebView];
         [self addRepeatButtonOnScreen];
@@ -86,7 +86,7 @@
     
     [webview init];
     webview.frame = CGRectMake(0, 0, screenSize.width, screenSize.height- offset);
-    NSString *urlAddress = @"http://localhost:3000/store/selectedpath";
+    NSString *urlAddress = @"https://ablinx.com/store/candyletters";
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObject = [NSURLRequest requestWithURL:url];
     [webview loadRequest:requestObject];

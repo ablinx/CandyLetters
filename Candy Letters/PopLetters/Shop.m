@@ -46,7 +46,7 @@
     UIWebView *webview = [[[UIWebView alloc]init]autorelease];
     int offset = screenSize.height/12;
     [webview initWithFrame:CGRectMake(0, offset , screenSize.width, screenSize.height- offset)];
-    NSString *urlAddress = @"http://www.bbc.co.uk";
+    NSString *urlAddress = @"https://ablinx.com/store/candyletters";
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObject = [NSURLRequest requestWithURL:url];
     [webview loadRequest:requestObject];

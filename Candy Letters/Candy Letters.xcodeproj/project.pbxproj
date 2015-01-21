@@ -337,7 +337,6 @@
 		D508D7D31939FA6400742A21 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D508D7D21939FA6400742A21 /* Default-568h@2x.png */; };
 		D508D7D5193A09FD00742A21 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D508D7D4193A09FD00742A21 /* Shop.storyboard */; };
 		D508D7D8193A0D5800742A21 /* ShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D508D7D7193A0D5800742A21 /* ShopView.m */; };
-		D523E255193A5FC4004D6C01 /* Shop.m in Sources */ = {isa = PBXBuildFile; fileRef = D523E254193A5FC4004D6C01 /* Shop.m */; };
 		D523E258193A60CC004D6C01 /* CCUIViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D523E257193A60CC004D6C01 /* CCUIViewWrapper.m */; };
 		D523E25A193B524C004D6C01 /* playAgainSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = D523E259193B524C004D6C01 /* playAgainSmall.png */; };
 		D57F0A8419B680A000C18813 /* store.png in Resources */ = {isa = PBXBuildFile; fileRef = D57F0A8319B680A000C18813 /* store.png */; };
@@ -846,8 +845,6 @@
 		D508D7D4193A09FD00742A21 /* Shop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
 		D508D7D6193A0D5800742A21 /* ShopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopView.h; sourceTree = "<group>"; };
 		D508D7D7193A0D5800742A21 /* ShopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopView.m; sourceTree = "<group>"; };
-		D523E253193A5FC4004D6C01 /* Shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shop.h; sourceTree = "<group>"; };
-		D523E254193A5FC4004D6C01 /* Shop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shop.m; sourceTree = "<group>"; };
 		D523E256193A60CC004D6C01 /* CCUIViewWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUIViewWrapper.h; sourceTree = "<group>"; };
 		D523E257193A60CC004D6C01 /* CCUIViewWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCUIViewWrapper.m; sourceTree = "<group>"; };
 		D523E259193B524C004D6C01 /* playAgainSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playAgainSmall.png; sourceTree = "<group>"; };
@@ -1053,8 +1050,6 @@
 				ACC94BEE16208CB3003C2B8C /* Supporting Files */,
 				D508D7D6193A0D5800742A21 /* ShopView.h */,
 				D508D7D7193A0D5800742A21 /* ShopView.m */,
-				D523E253193A5FC4004D6C01 /* Shop.h */,
-				D523E254193A5FC4004D6C01 /* Shop.m */,
 				D523E256193A60CC004D6C01 /* CCUIViewWrapper.h */,
 				D523E257193A60CC004D6C01 /* CCUIViewWrapper.m */,
 			);
@@ -1955,7 +1950,6 @@
 				ACC94AB216208CAE003C2B8C /* CCActionTween.m in Sources */,
 				ACC94AB516208CAF003C2B8C /* CCAnimation.m in Sources */,
 				ACC94AB816208CAF003C2B8C /* CCAnimationCache.m in Sources */,
-				D523E255193A5FC4004D6C01 /* Shop.m in Sources */,
 				ACC94ABB16208CAF003C2B8C /* CCAtlasNode.m in Sources */,
 				ACC94ABE16208CAF003C2B8C /* CCCamera.m in Sources */,
 				ACC94AC216208CAF003C2B8C /* CCConfiguration.m in Sources */,
