@@ -91,7 +91,7 @@
     NSURLRequest *requestObject = [NSURLRequest requestWithURL:url];
     [webview loadRequest:requestObject];
     
-    UIView* glView = [[CCDirector sharedDirector] openGLView];
+    UIView* glView = [[CCDirector sharedDirector] view];
     glView.opaque=YES;
     [glView addSubview:webview.viewForBaselineLayout];
     

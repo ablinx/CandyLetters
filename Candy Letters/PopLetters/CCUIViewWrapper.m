@@ -49,7 +49,7 @@
 	if (parent == nil)
 		[uiItem removeFromSuperview];
 	else if(uiItem != nil)
-		[[[CCDirector sharedDirector] openGLView] addSubview:uiItem];
+		[[[CCDirector sharedDirector] view] addSubview:uiItem];
 	[super setParent:parent];
 }
 
