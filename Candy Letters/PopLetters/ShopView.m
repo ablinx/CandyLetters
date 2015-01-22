@@ -39,7 +39,7 @@
 	[self addChild:menu];
 }
 
--(void) addRepeatButtonOnScreen2
+-(void) addShopReloadButtonOnScreen
 {
     
 	CCMenuItemImage * menuItem2 =[CCMenuItemImage itemWithNormalImage:@"shopReload.png"
@@ -67,7 +67,7 @@
         [self addChild:colorLayer];
         [self addWebView];
         [self addRepeatButtonOnScreen];
-        [self addRepeatButtonOnScreen2];
+        [self addShopReloadButtonOnScreen];
         
         // Registering Google Analytics
         id tracker = [[GAI sharedInstance] defaultTracker];
