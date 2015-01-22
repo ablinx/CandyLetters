@@ -2142,9 +2142,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Google",
-					Analytics,
-					Library,
 					"$(PROJECT_DIR)/GAL",
 				);
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)";
@@ -2180,9 +2177,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Google",
-					Analytics,
-					Library,
 					"$(PROJECT_DIR)/GAL",
 				);
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)";
