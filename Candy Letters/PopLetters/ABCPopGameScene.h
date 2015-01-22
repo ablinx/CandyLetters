@@ -7,7 +7,6 @@
 #import "cocos2d.h"
 
 @interface ABCPopGameScene : CCLayer {
-    
     NSMutableArray *alphabets;
 	NSMutableArray *randomAlphabets;
 	NSMutableArray *stars;
@@ -18,7 +17,6 @@
 	NSString *selectedAlphabet;
 	CCSprite *alphabetToFind;
 	NSTimer *timer;
-    
     CGSize winSize;
 }
 
@@ -34,5 +32,7 @@
 @property (nonatomic,retain) CCSprite *alphabetToFind;
 @property (nonatomic,retain) NSTimer *timer;
 @property (nonatomic,assign) BOOL isSmallLetter;
+
++(void) setIsSmallLetter:(BOOL)val;
 
 @end

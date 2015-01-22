@@ -19,7 +19,6 @@
 @synthesize window=window_, navController=navController_, director=director_;
 
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
@@ -118,12 +117,12 @@
 
 
 
-
 // application will be killed
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	CC_DIRECTOR_END();
 }
+
 
 // purge memory
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
@@ -131,15 +130,18 @@
 	[[CCDirector sharedDirector] purgeCachedData];
 }
 
+
 // next delta time will be zero
 -(void) applicationSignificantTimeChange:(UIApplication *)application
 {
 	[[CCDirector sharedDirector] setNextDeltaTimeZero:YES];
 }
 
+
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     
 }
+
 
 - (void) dealloc
 {

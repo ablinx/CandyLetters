@@ -32,13 +32,14 @@
 	return scene;
 }
 
-//
+
 -(void) onEnter
 {
 	[super onEnter];
 	// In one second transition to the new scene
 	[self scheduleOnce:@selector(makeTransition:) delay:0];
 }
+
 
 -(void) makeTransition:(ccTime)dt
 {

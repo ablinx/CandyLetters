@@ -21,7 +21,6 @@ static BOOL isSmallLetter;
 
 @synthesize alphabets, randomAlphabets, stars, voices,voice,emitter,alphabetToFind,selectedAlphabet,timer;
 
-
 int x;
 int y;
 float rotateBy;
@@ -34,8 +33,6 @@ int noOfCorrectHits;
 int starPositionX;
 BOOL isTouched;
 int currentAlphabetIndex;
-
-
 
 
 +(id) scene
@@ -52,9 +49,6 @@ int currentAlphabetIndex;
 	// return the scene
 	return scene;
 }
-
-
-
 
 
 -(void) loadSmallAlphabets
@@ -111,9 +105,6 @@ int currentAlphabetIndex;
 }
 
 
-
-
-
 -(void) loadAllAlphabets
 {
 	NSBundle *bundle = [NSBundle mainBundle];
@@ -143,8 +134,6 @@ int currentAlphabetIndex;
 			continue;
 		}
 		
-		
-		
 		CCSprite *sprite = [CCSprite spriteWithFile:fileName];
         
 		sprite.userData = [[fileName stringByDeletingPathExtension] uppercaseString];
@@ -155,17 +144,11 @@ int currentAlphabetIndex;
 }
 
 
-
-
-
 -(void) generateRandomCoordinates
 {
 	x = arc4random() % (int) windowSize.width;
 	y = arc4random() % (int) windowSize.height;
 }
-
-
-
 
 
 -(void) startAnimation:(CCSprite *) sprite
@@ -180,10 +163,7 @@ int currentAlphabetIndex;
 	id actionMoveDone = [CCCallFuncN actionWithTarget:self selector:@selector(finishedMoving:)];
 	
 	[sprite runAction:[CCSequence actions:actionMove,actionRotate, actionMoveDone, nil]];
-    bool running = sprite.isRunning;
 }
-
-
 
 
 
@@ -206,15 +186,11 @@ int currentAlphabetIndex;
 
 
 
-
-
 -(void) playBackgroundMusic
 {
 	[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"kids_singing_background.mp3"];
 	[[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:0.2];
 }
-
-
 
 
 
@@ -224,8 +200,6 @@ int currentAlphabetIndex;
 	
 	return randomNumber;
 }
-
-
 
 
 
@@ -251,8 +225,6 @@ int currentAlphabetIndex;
 		}
 	}
 }
-
-
 
 
 
@@ -293,8 +265,6 @@ int currentAlphabetIndex;
 
 
 
-
-
 -(void) preLoadAllVoices
 {
 	for(int i=0; i<=voices.count-1; i++)
@@ -304,8 +274,6 @@ int currentAlphabetIndex;
 		[[SimpleAudioEngine sharedEngine] preloadEffect:self.voice];
 	}
 }
-
-
 
 
 
@@ -346,14 +314,10 @@ int currentAlphabetIndex;
 
 
 
-
-
 -(void)repeatAlphabet:(id)sender
 {
 	[[SimpleAudioEngine sharedEngine] playEffect:[[self.voice lowercaseString] stringByAppendingString:@".mp3"]];
 }
-
-
 
 
 
@@ -366,14 +330,10 @@ int currentAlphabetIndex;
 
 
 
-
-
 -(void) stopSound
 {
 	[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 }
-
-
 
 
 
@@ -394,12 +354,11 @@ int currentAlphabetIndex;
 
 
 
-
-
 +(void) setIsSmallLetter:(BOOL) val
 {
 	isSmallLetter = val;
 }
+
 
 
 +(BOOL) getIsSmallLetter
@@ -444,7 +403,6 @@ int currentAlphabetIndex;
             background = [CCSprite spriteWithFile:@"bgBubbles-568h@2x.png"];
         }
         
-        
         background.anchorPoint = CGPointMake(0,0);
         
         // release backgrounds
@@ -484,8 +442,6 @@ int currentAlphabetIndex;
 
 
 
-
-
 -(void) playDingSound
 {
 	[[SimpleAudioEngine sharedEngine] playEffect:@"ding.caf"];
@@ -493,14 +449,10 @@ int currentAlphabetIndex;
 
 
 
-
-
 -(void) playHitSound
 {
 	[[SimpleAudioEngine sharedEngine] playEffect:@"baloonpop.mp3"];
 }
-
-
 
 
 
@@ -526,8 +478,6 @@ int currentAlphabetIndex;
 
 
 
-
-
 -(void) explodeAlphabet
 {
     emitter = [[CCParticleExplosion alloc] init];
@@ -536,8 +486,6 @@ int currentAlphabetIndex;
     emitter.position = ccp(self.alphabetToFind.position.x,self.alphabetToFind.position.y);
     [self addChild:emitter];
 }
-
-
 
 
 
@@ -569,8 +517,6 @@ int currentAlphabetIndex;
 		[alphabetToFind runAction:[CCSequence actions:disappear,actionMoveDone, nil]];
 	}
 }
-
-
 
 
 
@@ -625,8 +571,6 @@ int currentAlphabetIndex;
 
 
 
-
-
 -(void) removeAlphabetToFindFromView:(id) sender
 {
 	CCSprite *sprite = (CCSprite *) sender;
@@ -636,8 +580,6 @@ int currentAlphabetIndex;
 	// add new random alphabet to the view
 	[self addNewAlphabet];
 }
-
-
 
 
 

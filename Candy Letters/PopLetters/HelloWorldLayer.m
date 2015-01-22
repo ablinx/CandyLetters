@@ -14,6 +14,7 @@
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
+
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
 {
@@ -29,6 +30,7 @@
 	// return the scene
 	return scene;
 }
+
 
 // on "init" you need to initialize your instance
 -(id) init
@@ -49,11 +51,7 @@
 		// add the label as a child to this Layer
 		[self addChild: label];
 		
-		
-		
-		//
 		// Leaderboards and Achievements
-		//
 		
 		// Default font size will be 28 points.
 		[CCMenuItemFont setFontSize:28];
@@ -67,7 +65,7 @@
 			
 			AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
 			
-			[[app navController] presentModalViewController:achivementViewController animated:YES];
+            [[app navController] presentViewController:achivementViewController animated:YES completion:nil];
 			
 			[achivementViewController release];
 		}
@@ -82,8 +80,7 @@
 			
 			AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
 			
-			[[app navController] presentModalViewController:leaderboardViewController animated:YES];
-			
+            [[app navController] presentViewController:leaderboardViewController animated:YES completion:nil];
 			[leaderboardViewController release];
 		}
 									   ];
@@ -116,12 +113,12 @@
 -(void) achievementViewControllerDidFinish:(GKAchievementViewController *)viewController
 {
 	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissModalViewControllerAnimated:YES];
+    [[app navController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void) leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
 {
 	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissModalViewControllerAnimated:YES];
+    [[app navController] dismissViewControllerAnimated:YES completion:nil];
 }
 @end

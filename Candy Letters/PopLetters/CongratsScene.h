@@ -7,7 +7,6 @@
 #import "cocos2d.h"
 
 @interface CongratsScene : CCScene {
-    
     CCParticleSnow *emitter;
     CGSize winSize;
 }

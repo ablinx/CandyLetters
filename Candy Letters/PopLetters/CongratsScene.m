@@ -25,8 +25,6 @@
 
 +(id) scene
 {
-
-
 	CCScene *scene = [CCScene node];
 	CongratsScene *layer = [CongratsScene node];
 
@@ -39,13 +37,12 @@
 
 
 
-
-
 -(void) restartGame:(CCMenuItem *) item
 {
 	// load the game scene
 	[[CCDirector sharedDirector] replaceScene:[HomeScene scene]];
 }
+
 
 
 -(void) loadShop:(CCMenuItem *) item
@@ -76,8 +73,6 @@
 		emitter.texture = [[CCTextureCache sharedTextureCache] addImage:@"snow.png"];
 		[self addChild:emitter];
 		
-        //CGSize windowSize = [[CCDirector sharedDirector] winSize];
-        
         [[SimpleAudioEngine sharedEngine] playEffect:@"congrats.mp3"];
 		
         CGSize windowSize = [[CCDirector sharedDirector] winSize];
@@ -102,8 +97,6 @@
 	
 	return self;
 }
-
-
 
 
 

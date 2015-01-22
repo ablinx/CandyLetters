@@ -65,14 +65,15 @@
 	[[CCDirector sharedDirector] replaceScene:[ABCPopGameScene scene]];
 }
 
+
 -(void) loadShop:(CCMenuItem *) item
 {
     [[CCDirector sharedDirector] replaceScene:[ShopView scene]];
 }
 
+
 -(void) createMenu
 {
-    
 	CGSize windowSize = [[CCDirector sharedDirector] winSize];
     
     CCMenuItem *menuItem1 = [CCMenuItemImage itemWithNormalImage:@"storeHome.png" selectedImage:@"storeHome.png" target:self selector:@selector(loadShop:)];
@@ -91,7 +92,6 @@
 {
 	[super dealloc];
 }
-
 
 
 @end
